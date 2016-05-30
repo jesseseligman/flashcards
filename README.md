@@ -1,0 +1,1 @@
+This is my first quarter project for the Full Stack Immersive program at Galvanize. This application is a combination translation and flashcards application. I am using the Yandex translation API for my translation. 
