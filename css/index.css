@@ -1,0 +1,46 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+
+.deck {
+  background: #eee;
+  box-shadow:
+  0 1px 1px rgba(0,0,0,0.15),
+  0 8px 0 -4px #eee,
+  0 8px 1px -3px rgba(0,0,0,0.15),
+  0 16px 0 -8px #eee,
+  0 16px 1px -7px rgba(0,0,0,0.15);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+
+main {
+  margin-top: 25px;
+}
+#translation {
+  font-size: 1.1rem;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#logo {
+  font-size: 1.8rem;
+}
+
+li a {
+  font-size: 1.3rem !important;
+  color: #00838f !important;
+}
+
+#deck-header {
+
+}
+
+#underline {
+  border-top: 2px solid #8C3932;
+  border-bottom: 2px solid #8C3932;
+  line-height: 10px;
+  font: 1px;
+  font: hidden;
+}
