@@ -15,6 +15,14 @@ html {
   margin: 20px;
 }
 
+.current {
+text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
+text-decoration: underline;
+border: 2px solid #8C3932;
+border-radius: 4px;
+box-shadow: none;
+}
+
 main {
   margin-top: 25px;
 }

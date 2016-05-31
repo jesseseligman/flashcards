@@ -59,7 +59,7 @@
 
   var addDeck = function(langFrom, langTo) {
     var $newDeck = $('<li>');
-      $newDeck.append(`<a class="deck center href="#">${langFrom}/${langTo}</a>`);
+      $newDeck.append(`<a class="deck center" href="#">${langFrom}/${langTo}</a>`);
 
       $('#nav-mobile').append($newDeck);
 
@@ -85,6 +85,7 @@
 
 // Tranlate mode for looking up words and adding to decks
   var translateMode = function() {
+  $('.current').removeClass('current');
 
   $('#translation').addClass('cyan darken-4');
   $('#action-button').text('translate!');
@@ -165,6 +166,7 @@
     });
   }
 
+
   // Maybe refactor showPrompt and showAnswer into one function?
       // var reset = function() {
       //   $('.card-content').empty();
@@ -172,7 +174,19 @@
       // }
 
 
+  var sideCollapse = function() {
+    $('.button-collapse').sideNav('hide');
+  }
+
   var practiceMode = function(event){
+    $('.current').removeClass('current');
+
+    window.setTimeout(sideCollapse, 600)
+
+    var target = event.target;
+    var $target = $(target);
+    $target.addClass('current');
+
 
     $('.card-content').empty();
 
@@ -180,6 +194,8 @@
 
     var lang1 = event.target.textContent.split('/')[0];
     var lang2 = event.target.textContent.split('/')[1];
+
+    var last
 
     //Improve styling of language labels
     $('.card-action').find('.col').empty();
@@ -198,7 +214,11 @@
   }
 })();
 
+
+
 // Code for materialize
+
+
 
 (function($){
   $(function(){
