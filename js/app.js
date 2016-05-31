@@ -23,20 +23,28 @@
     translateMode();
   })
 
+  var lastLangs = [];
+
   var renderDropdowns = function(){
     var $dropDown = $('<select>');
     $dropDown.addClass('browser-default z-depth-1');
-
     $dropDown.append('<option value="" selected disabled>Choose Language</option>');
 
-    for (var lang of languages) {
+
+    for (var language of languages) {
       var $option = $('<option>');
-      $option.text(lang[0]);
-      $option.val(lang[1]);
+      $option.text(language[0]);
+      $option.val(language[1]);
       $dropDown.append($option);
     }
 
     $('.card-action').find('.col').append($dropDown);
+
+//  Pre-selects the last languages used for translation
+    if (lastLangs.length !== 0){
+      $(`option:contains(${lastLangs[0]})`).eq(0).prop('selected', true);
+      $(`option:contains(${lastLangs[1]})`).eq(1).prop('selected', true);
+    }
   };
 
   var renderInput = function() {
@@ -110,6 +118,8 @@
 
       var langFrom = $(':selected').eq(0).text();
       var langTo = $(':selected').eq(1).text();
+
+      lastLangs = [langFrom, langTo];
 
       var $xhr = $.getJSON(`https://translate.yandex.net/api/v1.5/tr.json/translate?lang=${langCode1}-${langCode2}&text=${inputText}&key=trnsl.1.1.20160524T025705Z.32fabd01b839c936.4dd4f1ea278c1c46d5ca189f984879619639c5a6`);
 
@@ -195,7 +205,6 @@
     var lang1 = event.target.textContent.split('/')[0];
     var lang2 = event.target.textContent.split('/')[1];
 
-    var last
 
     //Improve styling of language labels
     $('.card-action').find('.col').empty();
