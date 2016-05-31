@@ -79,14 +79,17 @@
   };
 
   var saveCard = function(langFrom, langTo, inputText, translated) {
-    var card = {};
-    card[langFrom] = inputText;
-    card[langTo] = translated;
+    var newCard = {};
+    newCard[langFrom] = inputText;
+    newCard[langTo] = translated;
     for (var deck in decks){
       if (deck.includes(langFrom) && deck.includes(langTo)) {
-        // Add another if statement to check if a card already exists
-        decks[deck].push(card);
-        return;
+        for (var existingCard of decks[deck]) {
+          if (existingCard[langFrom] === newCard[langFrom]) {
+            return;
+          }
+        }
+        decks[deck].push(newCard);
       }
     }
   };
