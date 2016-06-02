@@ -1,7 +1,12 @@
 html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    font-family: Lato, GillSans, Calibri, Trebuchet, sans-serif;
   }
 
+main {
+  margin-top: 25px;
+}
+
+/*Styling to apply layered look of decks in side-nav */
 .deck {
   background: #eee;
   box-shadow:
@@ -15,6 +20,7 @@ html {
   margin: 20px;
 }
 
+/*Styles for currently selected deck in side-nav*/
 .current {
 text-shadow: 1px 1px rgba(0, 0, 0, 0.15);
 text-decoration: underline;
@@ -23,17 +29,18 @@ border-radius: 4px;
 box-shadow: none;
 }
 
-main {
-  margin-top: 25px;
+a {
+  color: inherit;
 }
+
 #translation {
-  font-size: 1.1rem;
-  padding-left: 8px;
-  padding-right: 8px;
+  font-size: 1rem;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 #logo {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 li a {
@@ -42,7 +49,8 @@ li a {
 }
 
 #deck-header {
-
+  font-size: 1.9rem;
+  color: #8C3932;
 }
 
 #underline {
@@ -51,4 +59,38 @@ li a {
   line-height: 10px;
   font: 1px;
   font: hidden;
+}
+
+.card-counter {
+  font-size: 1.3rem;
+  color: #8C3932;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#action-button {
+  margin-right: 10px;
+}
+
+#remove-card a {
+  background: #f44336;
+}
+
+.card-action {
+  font-weight: bold;
+}
+
+select {
+  font-weight: normal;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
