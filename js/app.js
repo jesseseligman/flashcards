@@ -183,21 +183,6 @@
     });
   };
 
-  // var shuffle = function(array) {
-  // 	var index = array.length;
-  // 	var temporaryValue, randomIndex;
-  //
-  // 	while (index > 0) {
-  // 		randomIndex = Math.floor(Math.random() * index);
-  // 		index -= 1;
-  //
-  // 		temporaryValue = array[index];
-  // 		array[index] = array[randomIndex];
-  // 		array[randomIndex] = temporaryValue;
-  // 	}
-	//    return array;
-  // }
-
   // ==============================================================================
   // Practice mode functions: removeCard, showPrompt, showAnswer, sideCollapse
   // ==============================================================================
