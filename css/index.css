@@ -33,6 +33,7 @@ a {
   color: inherit;
 }
 
+/*Translation link in header */
 #translation {
   font-size: 1rem;
   padding-left: 7px;
@@ -48,11 +49,13 @@ li a {
   color: #00838f !important;
 }
 
+/*Header in side-nav */
 #deck-header {
   font-size: 1.9rem;
   color: #8C3932;
 }
 
+/*Underline in side-nav */
 #underline {
   border-top: 2px solid #8C3932;
   border-bottom: 2px solid #8C3932;
@@ -61,6 +64,7 @@ li a {
   font: hidden;
 }
 
+/*Card counter div on practiceMode */
 .card-counter {
   font-size: 1.3rem;
   color: #8C3932;
@@ -70,10 +74,12 @@ li a {
   margin-bottom: 15px;
 }
 
+/*Main button that changes appearance and behavior between states */
 #action-button {
   margin-right: 10px;
 }
 
+/*Remove card button on practiceMode */
 #remove-card a {
   background: #f44336;
 }
